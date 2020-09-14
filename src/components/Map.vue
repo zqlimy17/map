@@ -28,66 +28,132 @@ export default {
     // Configure series
     let polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = "{name}";
-    polygonTemplate.fill = am4core.color("pink");
+    polygonTemplate.fill = am4core.color("silver");
 
     // Create hover state and set alternative fill color
     let hs = polygonTemplate.states.create("hover");
-    hs.properties.fill = am4core.color("hotpink");
+    hs.properties.fill = am4core.color("white");
+    polygonTemplate.stroke = am4core.color("slategrey");
+    chart.background.fill = am4core.color("slategrey");
+    chart.background.fillOpacity = 1;
     polygonSeries.data = [
       {
         id: "CA",
         name: "Canada",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "AU",
         name: "Australia",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "MY",
         name: "Malaysia",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "SG",
         name: "Singapore",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "KR",
         name: "KR",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "TH",
         name: "Thailand",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "ID",
         name: "Indonesia",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "PH",
         name: "Philippines",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "HK",
         name: "Hong Kong",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "CN",
         name: "China",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
       },
       {
         id: "TW",
         name: "Taiwan",
-        fill: am4core.color("green"),
+        fill: am4core.color("gold"),
+      },
+      //
+      // Places I want to go
+      //
+      {
+        id: "GB",
+        name: "United Kingdom",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "NL",
+        name: "Netherlands",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "US",
+        name: "United States",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "NO",
+        name: "Norway",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "SE",
+        name: "Sweden",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "IE",
+        name: "Ireland",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "FR",
+        name: "France",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "BE",
+        name: "Belgium",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "FI",
+        name: "Finland",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "IT",
+        name: "Italy",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "CH",
+        name: "Switzerland",
+        fill: am4core.color("skyblue"),
+      },
+      {
+        id: "NZ",
+        name: "New Zealand",
+        fill: am4core.color("skyblue"),
       },
     ];
     polygonSeries.exclude = ["AQ"]; // exclude antartica
@@ -98,7 +164,7 @@ export default {
     let stateSeriesTemplate = stateSeries.mapImages.template;
     let circle = stateSeriesTemplate.createChild(am4core.Circle);
     circle.radius = 4;
-    circle.fill = am4core.color("white");
+    circle.fill = am4core.color("hotpink");
     circle.stroke = am4core.color("black");
     circle.strokeWidth = 2;
     circle.nonScaling = true;
@@ -226,10 +292,13 @@ export default {
     // Important Places I've Visited [Series 2]
     let starSeries = chart.series.push(new am4maps.MapImageSeries());
     let starSeriesTemplate = starSeries.mapImages.template;
-    let star = starSeriesTemplate.createChild(am4core.Triangle);
-    star.fill = am4core.color("white");
-    star.stroke = am4core.color("black");
-    star.tooltipText = "{title}";
+    let circle2 = starSeriesTemplate.createChild(am4core.Circle);
+    circle2.radius = 4;
+    circle2.fill = am4core.color("white");
+    circle2.stroke = am4core.color("grey");
+    circle2.strokeWidth = 2;
+    circle2.nonScaling = true;
+    circle2.tooltipText = "{title}";
     starSeriesTemplate.propertyFields.latitude = "latitude";
     starSeriesTemplate.propertyFields.longitude = "longitude";
     starSeries.data = [
@@ -238,23 +307,12 @@ export default {
         longitude: -79.0377,
         title: "Niagara Falls",
       },
-      {
-        latitude: 25.033,
-        longitude: 121.5654,
-        title: "Taiwan: Taipei",
-      },
     ];
 
     let lineSeries = chart.series.push(new am4maps.MapLineSeries());
     lineSeries.data = [
       {
-        multiGeoLine: [
-          [
-            { latitude: 48.856614, longitude: 2.352222 },
-            { latitude: 40.712775, longitude: -74.005973 },
-            { latitude: 49.282729, longitude: -123.120738 },
-          ],
-        ],
+        multiGeoLine: [[{ latitude: 48.856614, longitude: 2.352222 }]],
       },
     ];
     chart.zoomControl = new am4maps.ZoomControl();
