@@ -1,0 +1,117 @@
+[
+  {
+    "latitude": 1.352083,
+    "longitude": 103.819839,
+    "title": "Singapore"
+  },
+  {
+    "latitude": 3.139003,
+    "longitude": 101.686852,
+    "title": "Malaysia: Kuala Lumpur"
+  },
+  {
+    "latitude": 1.4927,
+    "longitude": 103.7414,
+    "title": "Malaysia: Johor Bahru"
+  },
+  {
+    "latitude": 35.179554,
+    "longitude": 129.075638,
+    "title": "Korea: Busan"
+  },
+  {
+    "latitude": 3.4239,
+    "longitude": 101.7927,
+    "title": "Malaysia: Genting Highlands"
+  },
+  {
+    "latitude": 37.5665,
+    "longitude": 126.978,
+    "title": "Korea: Seoul"
+  },
+  {
+    "latitude": 33.489,
+    "longitude": 126.4983,
+    "title": "Seoul: Jeju Island"
+  },
+  {
+    "latitude": -37.8136,
+    "longitude": 144.9631,
+    "title": "Australia: Melbourne"
+  },
+  {
+    "latitude": 25.033,
+    "longitude": 121.5654,
+    "title": "Taiwan: Taipei"
+  },
+  {
+    "latitude": 24.1477,
+    "longitude": 120.6736,
+    "title": "Taiwan: Taichung"
+  },
+  {
+    "latitude": 22.6273,
+    "longitude": 120.3014,
+    "title": "Taiwan: Kaohsiung"
+  },
+  {
+    "latitude": 25.033,
+    "longitude": 121.5654,
+    "title": "Taiwan: Taipei"
+  },
+  {
+    "latitude": 22.3193,
+    "longitude": 114.1694,
+    "title": "Hongkong"
+  },
+  {
+    "latitude": 22.1987,
+    "longitude": 113.5439,
+    "title": "China: Macau"
+  },
+  {
+    "latitude": 13.7563,
+    "longitude": 100.5018,
+    "title": "Thailand: Bangkok"
+  },
+  {
+    "latitude": 7.8804,
+    "longitude": 98.3923,
+    "title": "Thailand: Phuket"
+  },
+  {
+    "latitude": 10.3157,
+    "longitude": 123.8854,
+    "title": "Philippines: Cebu"
+  },
+  {
+    "latitude": 14.5457,
+    "longitude": 121.5598,
+    "title": "Philippines: Real"
+  },
+  {
+    "latitude": 14.5995,
+    "longitude": 120.9842,
+    "title": "Philippines: Manila"
+  },
+  {
+    "latitude": 1.1301,
+    "longitude": 104.0529,
+    "title": "Indonesia: Batam"
+  },
+  {
+    "latitude": -8.3405,
+    "longitude": 115.092,
+    "title": "Indonesia: Bali"
+  },
+  {
+    "latitude": 43.6532,
+    "longitude": -79.3832,
+    "title": "Canada: Toronto"
+  },
+  {
+    "latitude": 45.4215,
+    "longitude": -75.6972,
+    "title": "Canada: Ottawa"
+  }
+]

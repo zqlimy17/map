@@ -10,6 +10,8 @@ import am4geodata_worldHigh from "@amcharts/amcharts4-geodata/worldHigh";
 export default {
   name: "Map",
   mounted() {
+    let WINDOW_WIDTH = window.innerWidth;
+
     // Create map instance
     let chart = am4core.create("chartdiv", am4maps.MapChart);
 
@@ -39,12 +41,12 @@ export default {
     polygonSeries.data = [
       {
         id: "CA",
-        name: "Canada",
+        name: "Canada: April 2013",
         fill: am4core.color("gold"),
       },
       {
         id: "AU",
-        name: "Australia",
+        name: "Australia: December 2016",
         fill: am4core.color("gold"),
       },
       {
@@ -54,42 +56,42 @@ export default {
       },
       {
         id: "SG",
-        name: "Singapore",
+        name: "Singapore: Home",
         fill: am4core.color("gold"),
       },
       {
         id: "KR",
-        name: "KR",
+        name: "Korea: July 2017",
         fill: am4core.color("gold"),
       },
       {
         id: "TH",
-        name: "Thailand",
+        name: "Thailand: October 2014",
         fill: am4core.color("gold"),
       },
       {
         id: "ID",
-        name: "Indonesia",
+        name: "Indonesia: June 2015",
         fill: am4core.color("gold"),
       },
       {
         id: "PH",
-        name: "Philippines",
+        name: "Philippines: November 2018",
         fill: am4core.color("gold"),
       },
       {
         id: "HK",
-        name: "Hong Kong",
+        name: "Hong Kong: January 2014",
         fill: am4core.color("gold"),
       },
       {
         id: "CN",
-        name: "China",
+        name: "China: January 2014",
         fill: am4core.color("gold"),
       },
       {
         id: "TW",
-        name: "Taiwan",
+        name: "Taiwan: October 2015",
         fill: am4core.color("gold"),
       },
       //
@@ -98,62 +100,129 @@ export default {
       {
         id: "GB",
         name: "United Kingdom",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "NL",
         name: "Netherlands",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("palegreen"),
+      },
+
+      {
+        id: "NZ",
+        name: "New Zealand",
+        fill: am4core.color("palegreen"),
+      },
+      {
+        id: "KP",
+        name: "North Korea",
+        fill: am4core.color("palegreen"),
+      },
+      {
+        id: "NP",
+        name: "Nepal",
+        fill: am4core.color("palegreen"),
+      },
+      {
+        id: "MM",
+        name: "Myanmmar",
+        fill: am4core.color("palegreen"),
+      },
+      {
+        id: "LA",
+        name: "Laos",
+        fill: am4core.color("palegreen"),
+      },
+      {
+        id: "KH",
+        name: "Cambodia",
+        fill: am4core.color("palegreen"),
+      },
+      {
+        id: "VN",
+        name: "Vietnam",
+        fill: am4core.color("palegreen"),
+      },
+      // Places I want to go eventually
+      {
+        id: "RU",
+        name: "Russia",
+        fill: am4core.color("lightsteelblue"),
       },
       {
         id: "US",
         name: "United States",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("lightsteelblue"),
       },
       {
         id: "NO",
         name: "Norway",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("lightsteelblue"),
       },
       {
         id: "SE",
         name: "Sweden",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("lightsteelblue"),
       },
       {
         id: "IE",
         name: "Ireland",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("lightsteelblue"),
       },
       {
         id: "FR",
         name: "France",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("lightsteelblue"),
       },
       {
         id: "BE",
         name: "Belgium",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("lightsteelblue"),
       },
       {
         id: "FI",
         name: "Finland",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("lightsteelblue"),
       },
       {
         id: "IT",
         name: "Italy",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("lightsteelblue"),
       },
       {
         id: "CH",
         name: "Switzerland",
-        fill: am4core.color("skyblue"),
+        fill: am4core.color("lightsteelblue"),
       },
       {
-        id: "NZ",
-        name: "New Zealand",
-        fill: am4core.color("skyblue"),
+        id: "IN",
+        name: "India",
+        fill: am4core.color("lightsteelblue"),
+      },
+      {
+        id: "ES",
+        name: "Spain",
+        fill: am4core.color("lightsteelblue"),
+      },
+      {
+        id: "GR",
+        name: "Greece",
+        fill: am4core.color("lightsteelblue"),
+      },
+      {
+        id: "TR",
+        name: "Turkey",
+        fill: am4core.color("lightsteelblue"),
+      },
+      {
+        id: "DK",
+        name: "Denmark",
+        fill: am4core.color("lightsteelblue"),
+      },
+      {
+        id: "MN",
+        name: "Mongolia",
+        fill: am4core.color("lightsteelblue"),
       },
     ];
     polygonSeries.exclude = ["AQ"]; // exclude antartica
@@ -164,7 +233,7 @@ export default {
     let stateSeriesTemplate = stateSeries.mapImages.template;
     let circle = stateSeriesTemplate.createChild(am4core.Circle);
     circle.radius = 4;
-    circle.fill = am4core.color("hotpink");
+    circle.fill = am4core.color("turquoise");
     circle.stroke = am4core.color("black");
     circle.strokeWidth = 2;
     circle.nonScaling = true;
@@ -305,17 +374,70 @@ export default {
       {
         latitude: 43.0962,
         longitude: -79.0377,
-        title: "Niagara Falls",
+        title: "Niagara Falls: April 2013",
       },
     ];
 
-    let lineSeries = chart.series.push(new am4maps.MapLineSeries());
-    lineSeries.data = [
+    chart.zoomControl = new am4maps.ZoomControl();
+    if (WINDOW_WIDTH < 453) {
+      chart.homeZoomLevel = 4;
+      chart.homeGeoPoint = {
+        latitude: 1,
+        longitude: 103,
+      };
+    } else if (WINDOW_WIDTH < 768) {
+      chart.homeZoomLevel = 3;
+      chart.homeGeoPoint = {
+        latitude: 1,
+        longitude: 103,
+      };
+    } else if (WINDOW_WIDTH < 991) {
+      chart.homeZoomLevel = 2;
+      chart.homeGeoPoint = {
+        latitude: 1,
+        longitude: 103,
+      };
+    } else if (WINDOW_WIDTH < 1200) {
+      chart.homeZoomLevel = 1.5;
+      chart.homeGeoPoint = {
+        latitude: 1,
+        longitude: 103,
+      };
+    }
+    // Legend
+    let legend = new am4maps.Legend();
+
+    legend.parent = chart.chartContainer;
+    legend.background.fill = am4core.color("#fff");
+    legend.background.fillOpacity = 0.2;
+    legend.color = am4core.color("#fff");
+    legend.width = 210;
+    legend.align = "left";
+    legend.padding(10, 15, 10, 15);
+    legend.data = [
       {
-        multiGeoLine: [[{ latitude: 48.856614, longitude: 2.352222 }]],
+        name: "Visited",
+        fill: "gold",
+      },
+      {
+        name: "To Visit Soon",
+        fill: "palegreen",
+      },
+      {
+        name: "To Visit Eventually",
+        fill: "lightsteelblue",
+      },
+      {
+        name: "Cities/States Visited",
+        fill: "turquoise",
+      },
+      {
+        name: "Points of Interest",
+        fill: "white",
       },
     ];
-    chart.zoomControl = new am4maps.ZoomControl();
+    legend.itemContainers.template.clickable = false;
+    legend.itemContainers.template.focusable = false;
   },
 
   beforeDestroy() {
@@ -330,5 +452,5 @@ export default {
 <style lang="sass" scoped>
 #chartdiv
   width: 100%
-  height: 90vh
+  height: 100vh
 </style>

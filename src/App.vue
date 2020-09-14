@@ -1,9 +1,9 @@
 <template>
-  <b-container id="app">
+  <div id="app">
     <Header />
     <Map />
     <Footer />
-  </b-container>
+  </div>
 </template>
 
 <script>
@@ -17,12 +17,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-*
-  outline: 1px solid gold
-  outline-offset: -1px
+
 #app
   font-family: Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   color: #2c3e50
+  background-color: slategrey
+  height: 100vh
 </style>
