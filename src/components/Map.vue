@@ -30,7 +30,7 @@ export default {
     // Configure series
     let polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = "{name}";
-    polygonTemplate.fill = am4core.color("silver");
+    polygonTemplate.fill = am4core.color("whitesmoke");
 
     // Create hover state and set alternative fill color
     let hs = polygonTemplate.states.create("hover");
@@ -94,19 +94,40 @@ export default {
         name: "Taiwan: October 2015",
         fill: am4core.color("gold"),
       },
-      //
-      // Places I want to go
-      //
+      // Europe 2022 Update
       {
         id: "GB",
-        name: "United Kingdom",
-        fill: am4core.color("palegreen"),
+        name: "United Kingdom: May 2022",
+        fill: am4core.color("gold"),
+      },
+      {
+        id: "FR",
+        name: "France: May 2022",
+        fill: am4core.color("gold"),
+      },
+      {
+        id: "BE",
+        name: "Belgium: May 2022",
+        fill: am4core.color("gold"),
+      },
+      {
+        id: "CH",
+        name: "Switzerland: April 2022",
+        fill: am4core.color("gold"),
       },
       {
         id: "NL",
-        name: "Netherlands",
-        fill: am4core.color("palegreen"),
+        name: "Netherlands: April 2022",
+        fill: am4core.color("gold"),
       },
+      {
+        id: "DE",
+        name: "Germany: March 2022",
+        fill: am4core.color("gold"),
+      },
+      //
+      // Places I want to go
+      //
 
       {
         id: "NZ",
@@ -145,84 +166,65 @@ export default {
       },
       // Places I want to go eventually
       {
-        id: "RU",
-        name: "Russia",
-        fill: am4core.color("lightsteelblue"),
-      },
-      {
         id: "US",
         name: "United States",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "NO",
         name: "Norway",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "SE",
         name: "Sweden",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "IE",
         name: "Ireland",
-        fill: am4core.color("lightsteelblue"),
-      },
-      {
-        id: "FR",
-        name: "France",
-        fill: am4core.color("lightsteelblue"),
-      },
-      {
-        id: "BE",
-        name: "Belgium",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "FI",
         name: "Finland",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "IT",
         name: "Italy",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
-      {
-        id: "CH",
-        name: "Switzerland",
-        fill: am4core.color("lightsteelblue"),
-      },
+
       {
         id: "IN",
         name: "India",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "ES",
         name: "Spain",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "GR",
         name: "Greece",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "TR",
         name: "Turkey",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "DK",
         name: "Denmark",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
       {
         id: "MN",
         name: "Mongolia",
-        fill: am4core.color("lightsteelblue"),
+        fill: am4core.color("palegreen"),
       },
     ];
     polygonSeries.exclude = ["AQ"]; // exclude antartica
@@ -356,6 +358,108 @@ export default {
         longitude: -75.6972,
         title: "Canada: Ottawa",
       },
+      // Europe 2022 Update
+      {
+        latitude: 48.1351,
+        longitude: 11.582,
+        title: "Munich: 31 March 2022",
+      },
+      {
+        latitude: 48.779301,
+        longitude: 9.1071758,
+        title: "Stuttgart: 6 April 2022",
+      },
+      {
+        latitude: 48.5222366,
+        longitude: 8.977744,
+        title: "Tubingen: 11 April 2022",
+      },
+      {
+        latitude: 47.7153074,
+        longitude: 8.6108257,
+        title: "Schaffhausen: 12 April 2022",
+      },
+      {
+        latitude: 48.5691668,
+        longitude: 7.6920399,
+        title: "Strasbourg: 14 April 2022",
+      },
+      {
+        latitude: 52.3547498,
+        longitude: 4.8339211,
+        title: "Amsterdam: 15 April 2022 - King's Day: 26 April",
+      },
+      {
+        latitude: 48.8589466,
+        longitude: 2.2769956,
+        title: "Paris: 28 April 2022",
+      },
+      {
+        latitude: 51.2608697,
+        longitude: 3.1520689,
+        title: "Paris: 7 May 2022",
+      },
+      {
+        latitude: 52.450318,
+        longitude: 4.7880663,
+        title: "Zaandam: 8 May 2022",
+      },
+      {
+        latitude: 55.9412211,
+        longitude: -3.3488579,
+        title: "Edinburgh: 12 May 2022",
+      },
+      {
+        latitude: 51.7548197,
+        longitude: -1.2565555,
+        title: "Oxford: 19 May 2022",
+      },
+      {
+        latitude: 51.528505,
+        longitude: -0.3886615,
+        title: "London: 22 May 2022",
+      },
+      // Europe Minor Cities
+      {
+        latitude: 47.5729138,
+        longitude: 9.6535152,
+        title: "Lindau: 12 April 2022",
+      },
+      {
+        latitude: 47.9874048,
+        longitude: 7.7263807,
+        title: "Freiburg im Breisgau: 13 April 2022",
+      },
+      {
+        latitude: 52.071739,
+        longitude: 4.254228,
+        title: "The Hague: 23 April 2022",
+      },
+      {
+        latitude: 51.4839234,
+        longitude: -0.6140359,
+        title: "Windsor: 29 May 2022",
+      },
+      {
+        latitude: 51.3801748,
+        longitude: -2.3995493,
+        title: "Bath: 29 May 2022",
+      },
+      {
+        latitude: 51.5548788,
+        longitude: -0.3162035,
+        title: "Wembly: 1 June 2022 - Finalissima: Argentina vs Italy",
+      },
+      {
+        latitude: 51.3328806,
+        longitude: -0.297906,
+        title: "Epsom: 4 June 2022",
+      },
+      {
+        latitude: 51.400526,
+        longitude: -0.3440538,
+        title: "Molesey: 5 June 2022",
+      },
     ];
 
     // Important Places I've Visited [Series 2]
@@ -375,6 +479,16 @@ export default {
         latitude: 43.0962,
         longitude: -79.0377,
         title: "Niagara Falls: April 2013",
+      },
+      {
+        latitude: 57.2741432,
+        longitude: -4.6417654,
+        title: "Loch Ness: 14 May 2022",
+      },
+      {
+        latitude: 51.1788853,
+        longitude: -1.8284037,
+        title: "Stonehenge: 29 May 2022",
       },
     ];
 
@@ -404,6 +518,7 @@ export default {
         longitude: 103,
       };
     }
+    chart.zoomControl.valign = "middle";
     // Legend
     let legend = new am4maps.Legend();
 
@@ -412,7 +527,7 @@ export default {
     legend.background.fillOpacity = 0.2;
     legend.color = am4core.color("#fff");
     legend.width = 210;
-    legend.align = "left";
+    legend.position = "left";
     legend.padding(10, 15, 10, 15);
     legend.data = [
       {
@@ -420,15 +535,11 @@ export default {
         fill: "gold",
       },
       {
-        name: "To Visit Soon",
+        name: "To Visit",
         fill: "palegreen",
       },
       {
-        name: "To Visit Eventually",
-        fill: "lightsteelblue",
-      },
-      {
-        name: "Cities/States Visited",
+        name: "Cities / States",
         fill: "turquoise",
       },
       {

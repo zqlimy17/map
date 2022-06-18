@@ -14,17 +14,17 @@ export default {
 div
   position: absolute
   bottom: 0
+  right: 0
   width: 100%
   margin: 0 auto
-  p 
+  p
     position: relative
-    text-align: center
-    color: azure
+    text-align: right
     margin: 0
-    padding: 0
+    padding: 0 15px 10px 0
     a
       text-decoration: none
-      color: azure
+      color: gold
       &:hover
-        color: lime
+        color: pink
 </style>

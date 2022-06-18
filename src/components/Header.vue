@@ -1,6 +1,14 @@
 <template>
   <div id="map">
-    <h1>ATLAS</h1>
+    <div class="wrapper">
+      <h1>ATLAS</h1>
+      <b-button
+        class="home-button"
+        variant="outline-warning"
+        href="https://zqlimy.com"
+        >Home</b-button
+      >
+    </div>
   </div>
 </template>
 
@@ -17,7 +25,13 @@ export default {
   z-index: 2
   width: 100%
   text-align: center
-  h1
-    margin: 0
-    color: azure
+  .wrapper
+    position: relative
+    h1
+      margin: 0
+      color: azure
+    .home-button
+      position: absolute
+      right: 10px
+      top: 10px
 </style>
