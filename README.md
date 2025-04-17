@@ -11,7 +11,7 @@ Add in `vue.config.js`:
 
 ```
 module.exports = {
-  publicPath: "/atlas/",
+  publicPath: "/",
 };
 
 ```

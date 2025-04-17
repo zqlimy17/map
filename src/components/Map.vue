@@ -125,6 +125,16 @@ export default {
         name: "Germany: March 2022",
         fill: am4core.color("gold"),
       },
+      {
+        id: "JP",
+        name: "Japan: October 2023",
+        fill: am4core.color("gold"),
+      },
+      {
+        id: "NP",
+        name: "Nepal: September 2024",
+        fill: am4core.color("gold"),
+      },
       //
       // Places I want to go
       //
@@ -460,6 +470,26 @@ export default {
         longitude: -0.3440538,
         title: "Molesey: 5 June 2022",
       },
+      {
+        latitude: 26.5644,
+        longitude: 128.0056,
+        title: "Okinawa: 22 October 2023",
+      },
+      {
+        latitude: 35.6764,
+        longitude: 139.65,
+        title: "Tokyo: 27 October 2023",
+      },
+      {
+        latitude: 35.0116,
+        longitude: 135.7681,
+        title: "Kyoto: 4 November 2023",
+      },
+      {
+        latitude: 34.6937,
+        longitude: 135.5023,
+        title: "Osaka: 7 November 2023",
+      },
     ];
 
     // Important Places I've Visited [Series 2]
@@ -489,6 +519,39 @@ export default {
         latitude: 51.1788853,
         longitude: -1.8284037,
         title: "Stonehenge: 29 May 2022",
+      },
+      {
+        latitude: 35.3606,
+        longitude: 138.7274,
+        title: "Mount Fuji: 1 November 2023",
+      },
+      {
+        latitude: 28.5807,
+        longitude: 83.9755,
+        title: "Annapurna Circuit: 8 September 2024",
+      },
+    ];
+
+    // Draw the Annapurna Circuit (Polyline)
+    let polylineSeries = chart.series.push(new am4maps.MapLineSeries());
+    let polylineTemplate = polylineSeries.mapLines.template;
+    polylineTemplate.stroke = am4core.color("#FF6347"); // Red color
+    polylineTemplate.strokeWidth = 0.3;
+    polylineTemplate.tooltipText = "Annapurna Circuit (My 12-days, 110KM trek!";
+
+    // Coordinates for Annapurna Circuit (Key locations on the route)
+    polylineSeries.data = [
+      {
+        multiGeoLine: [
+          [
+            { latitude: 28.0152, longitude: 84.5114 }, // Jagat (starting point)
+            { latitude: 28.396, longitude: 84.7386 }, // Besisahar
+            { latitude: 28.4744, longitude: 84.398 }, // Manang
+            { latitude: 28.5807, longitude: 83.9755 }, // Thorong La Pass
+            { latitude: 28.2392, longitude: 83.9777 }, // Jomsom
+            { latitude: 28.2215, longitude: 83.9775 }, // Pokhara
+          ],
+        ],
       },
     ];
 

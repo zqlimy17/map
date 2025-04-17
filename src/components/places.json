@@ -113,5 +113,15 @@
     "latitude": 45.4215,
     "longitude": -75.6972,
     "title": "Canada: Ottawa"
+  },
+  {
+    "latitude": 35.6762,
+    "longitude": 139.6503,
+    "title": "Japan: Tokyo"
+  },
+  {
+    "latitude": 27.7172,
+    "longitude": 85.324,
+    "title": "Nepal: Kathmandu"
   }
 ]
