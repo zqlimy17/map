@@ -141,8 +141,8 @@ export default {
 
       {
         id: "NZ",
-        name: "New Zealand",
-        fill: am4core.color("palegreen"),
+        name: "New Zealand: November 2025",
+        fill: am4core.color("gold"),
       },
       {
         id: "KP",
@@ -175,11 +175,7 @@ export default {
         fill: am4core.color("palegreen"),
       },
       // Places I want to go eventually
-      {
-        id: "US",
-        name: "United States",
-        fill: am4core.color("palegreen"),
-      },
+
       {
         id: "NO",
         name: "Norway",
@@ -234,6 +230,11 @@ export default {
       {
         id: "MN",
         name: "Mongolia",
+        fill: am4core.color("palegreen"),
+      },
+      {
+        id: "ZA",
+        name: "South Africa",
         fill: am4core.color("palegreen"),
       },
     ];
@@ -490,6 +491,18 @@ export default {
         longitude: 135.5023,
         title: "Osaka: 7 November 2023",
       },
+
+      // New Zealand 2025
+      {
+        latitude: -36.852095,
+        longitude: 174.7631803,
+        title: "Auckland: 3 November 2025",
+      },
+      {
+        latitude: -45.0321923,
+        longitude: 168.661,
+        title: "Queenstown: 9 November 2025",
+      },
     ];
 
     // Important Places I've Visited [Series 2]
@@ -529,6 +542,16 @@ export default {
         latitude: 28.5807,
         longitude: 83.9755,
         title: "Annapurna Circuit: 8 September 2024",
+      },
+      {
+        latitude: -38.6866197,
+        longitude: 176.0694773,
+        title: "Taupo: 7 November 2025 - Skydive",
+      },
+      {
+        latitude: -44.6190189,
+        longitude: 167.8687603,
+        title: "Milford Sound: 11 November 2025 - Helicopter Aerial Landing",
       },
     ];
 
